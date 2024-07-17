@@ -1,45 +1,47 @@
 <div ng-controller="bookController">
-<div ng-show="viewForm">
-  <h1 style="text-align: center">Add new Book</h1>
+  <div ng-show="viewForm">
+    <h1 style="text-align: center">Add new Book</h1>
     <form ng-submit="saveForm()" name="bookForm">
       <label>Book Name:</label>
-      <input type="text" ng-model="book.bookName" required /><br/>
+      <input type="text" ng-model="book.bookName" required /><br />
       <label>Author Name:</label>
-      <input type="text" ng-model="book.authorName" required /><br/>
+      <input type="text" ng-model="book.authorName" required /><br />
       <label>Context:</label>
-      <input type="text" ng-model="book.context" required /><br/>
+      <input type="text" ng-model="book.context" required /><br />
       <label>Publish Year:</label>
-      <input type="number" ng-model="book.publishYear" required /><br/>
+      <input type="number" ng-model="book.publishYear" required /><br />
       <button type="submit" ng-show="!editing">Add Book</button>
       <button type="submit" ng-show="editing">Update Book</button>
       <button type="button" ng-click="cancelForm()">Cancel</button>
     </form>
-</div>
-<div ng-show="viewTable">
+  </div>
+  <div ng-show="viewTable">
     <button type="button" ng-click="showForm()">Add New Book</button>
     <h1 style="text-align: center">Book Details</h1>
     <table>
-        <thead>
-            <tr>
-              <th>Book Name</th>
-              <th>Author Name</th>
-              <th>Context</th>
-              <th>Publish Year</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr ng-repeat="book in books">
-              <td>{{ book.bookName }}</td>
-              <td>{{ book.authorName }}</td>
-              <td>{{ book.context }}</td>
-              <td>{{ book.publishYear }}</td>
-              <td>
-                <button ng-click="editBook(book)">Edit</button>
-                <button style="background-color: red;" ng-click="deleteBook(book)">Delete</button>
-              </td>
-            </tr>
-          </tbody>
+      <thead>
+        <tr>
+          <th>Book Name</th>
+          <th>Author Name</th>
+          <th>Context</th>
+          <th>Publish Year</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="book in books">
+          <td>{{ book.bookName }}</td>
+          <td>{{ book.authorName }}</td>
+          <td>{{ book.context }}</td>
+          <td>{{ book.publishYear }}</td>
+          <td>
+            <button ng-click="editBook(book)">Edit</button>
+            <button style="background-color: red" ng-click="deleteBook(book)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
     </table>
-</div>
+  </div>
 </div>
