@@ -6,6 +6,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <script src="app/app.module.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      
+      $(document).ready(function () {
+        $("h1").on("click", function () {
+          console.log("H1 clicked");
+          $(this).css({
+            "background-color": "blue",
+            "text-align": "left",
+          });
+        });
+      });
+    </script>
 
     <style>
       body {
