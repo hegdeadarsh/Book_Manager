@@ -79,15 +79,19 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
-        $(document).on('click', 'h1', function () {
-          alert("H1 clicked");
+        
+        $("table tr").each(function () {
+          alert($(this).html());
+        });
+        
+        $(document).on("click", "h1", function () {
           $(this).css({
             "background-color": "blue",
             "text-align": "left",
           });
         });
+
       });
     </script>
-    
   </body>
 </html>
