@@ -1,1 +1,1 @@
-Sample AngularJS fronend CRUD webpage. 
+Sample AngularJS frontend CRUD webpage. 

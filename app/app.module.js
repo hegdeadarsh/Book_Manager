@@ -75,12 +75,3 @@ var bookApp = angular
       return -1;
     }
   });
-
-  // angular.element(document).ready(function () {
-  //   angular.element(document).on('click', 'h1', function () {
-  //     angular.element(this).css({
-  //       "background-color": "red",
-  //       "text-align": "left",
-  //     });
-  //   });
-  // });
